@@ -1,0 +1,6 @@
+#! /bin/bash
+set -e
+
+[ -f ~/.sb/$1 ] || (echo "No sound found..." && exit 1)
+
+mplayer ~/.sb/$1 &>/dev/null
